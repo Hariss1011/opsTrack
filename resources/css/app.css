@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* =========================================
+   OpsTrack — Dark Pagination
+   ========================================= */
+
+.opstrack-pagination {
+    min-width: 0;
+    max-width: 100%;
+    color: #94a3b8;
+    color-scheme: dark;
+}
+
+/* Struktur navigasi Laravel */
+.opstrack-pagination nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    min-width: 0;
+    max-width: 100%;
+}
+
+.opstrack-pagination nav > div:first-child {
+    color: #94a3b8;
+    font-size: 0.8125rem;
+}
+
+/* Kontainer pagination */
+.opstrack-pagination nav > div:last-child {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* Semua link dan tombol pagination */
+.opstrack-pagination nav a,
+.opstrack-pagination nav button,
+.opstrack-pagination nav span[aria-current] > span,
+.opstrack-pagination nav span[aria-disabled] > span {
+    border-color: #35445b !important;
+    background-color: #111b2e !important;
+    color: #cbd5e1 !important;
+    box-shadow: none !important;
+}
+
+/* Previous/Next dan nomor halaman */
+.opstrack-pagination nav a,
+.opstrack-pagination nav button {
+    transition:
+        background-color 150ms ease,
+        border-color 150ms ease,
+        color 150ms ease;
+}
+
+/* Hover tombol aktif */
+.opstrack-pagination nav a:hover,
+.opstrack-pagination nav button:hover {
+    border-color: #3b82f6 !important;
+    background-color: #1e3a5f !important;
+    color: #ffffff !important;
+}
+
+/* Fokus keyboard */
+.opstrack-pagination nav a:focus,
+.opstrack-pagination nav button:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Halaman yang sedang aktif */
+.opstrack-pagination nav span[aria-current] > span {
+    border-color: #3b82f6 !important;
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+}
+
+/* Previous/Next yang nonaktif */
+.opstrack-pagination nav span[aria-disabled] > span {
+    border-color: #29364a !important;
+    background-color: #0b1120 !important;
+    color: #64748b !important;
+    opacity: 1 !important;
+    cursor: not-allowed;
+}
+
+/* Ikon panah */
+.opstrack-pagination nav svg {
+    width: 1.125rem;
+    height: 1.125rem;
+    color: inherit;
+}
+
+/* Scrollbar khusus pagination */
+.opstrack-pagination nav > div:last-child {
+    scrollbar-width: thin;
+    scrollbar-color: #35445b #0b1120;
+}
+
+.opstrack-pagination nav > div:last-child::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.opstrack-pagination nav > div:last-child::-webkit-scrollbar-track {
+    background: #0b1120;
+    border-radius: 999px;
+}
+
+.opstrack-pagination nav > div:last-child::-webkit-scrollbar-thumb {
+    background: #35445b;
+    border-radius: 999px;
+}
+
+.opstrack-pagination nav > div:last-child::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
+
+/* Scrollbar utama halaman agar konsisten dengan tema */
+html {
+    scrollbar-color: #35445b #0b1120;
+    scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+    background: #0b1120;
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+    background: #35445b;
+    border-radius: 999px;
+}
+
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover {
+    background: #3b82f6;
+}
